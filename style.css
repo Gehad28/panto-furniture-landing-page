@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+:root {
+    --orange: #E58411;
+    --very-dark-grey: #1E1E1E;
+    --dark-grey: rgb(30, 30, 30, 0.9);
+    --light-grey: rgb(30, 30, 30, 0.8);
+    --very-light-grey: #EEEEEE;
+    --dark-blue: #0D1B39;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Questrial", sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.01em;
+    background-image: url(assets/images/background-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: auto;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Navbar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 4rem;
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    font-size: 0.7em;
+}
+
+.fa-chevron-down {
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+nav, nav a {
+    color: white;
+}
+
+nav .logo {
+    font-weight: 600;
+}
+
+nav .shopping-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+nav .cart-items-no {
+    border-radius: 50%;
+    background-color: var(--orange);
+    text-align: center;
+    padding: 0.2rem;
+    font-size: 0.6em;
+    position: absolute;
+    top: 0;
+    left: 65%;
+}
+
+nav span {
+    cursor: pointer;
+}
+
+nav ul a:hover, nav ul span:hover {
+    color: var(--orange);
+}
+
+nav .active {
+    color: var(--orange);
+}
+
+.drop-menu {
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    display: none;
+}
+
+.drop-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.drop-menu ul li {
+    padding: 0.5rem 1rem;
+}
+
+.drop-menu ul li:first-child {
+    padding-top: 1rem;
+}
+
+.drop-menu ul li:last-child {
+    padding-bottom: 1rem;
+}
+
+.drop-menu ul li:hover {
+    background-color: var(--dark-grey);
+    cursor: pointer;
+}
+
+.drop-menu a {
+    color: var(--orange);
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.show-drop-menu {
+    display: block;
+}
+
+
+/* Main */
+
+.main-section {
+    /* margin: 4rem; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    line-height: 1.4;
+    min-height: 1084px;
+}
+
+h1 {
+    font-size: 3em;
+    padding: 0 12rem;
+}
+
+.main-section p {
+    opacity: 80%;
+    width: 42%;
+}
+
+.main-section form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.input-field {
+    border-radius: 42px;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    align-content: center;
+    display: flex;
+    width: 25%;
+}
+
+input[type="search"] {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: inherit;
+    font-size: 0.8em;
+    width: 100%;
+}
+
+input[type="search"]:focus {
+    outline: none;
+}
+
+input[type="search"]::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1em;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+.fa-magnifying-glass {
+    background-color: var(--orange);
+    border-radius: 50%;
+    padding: 0.8rem;
+    font-size: 0.8em;
+}
+
+.second-section {
+    display: flex;
+}
