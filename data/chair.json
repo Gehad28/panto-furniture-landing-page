@@ -62,5 +62,69 @@
         "name": "Nyantuy Chair",
         "rating": 5,
         "price": 921
+    },
+    {
+        "img": "assets/images/chair-1.png",
+        "imgAlt": "",
+        "type": "Chair",
+        "name": "Sakarias Armchair",
+        "rating": 5,
+        "price": 392
+    },
+    {
+        "img": "assets/images/chair-2.png",
+        "imgAlt": "",
+        "type": "Chair",
+        "name": "Baltsar Chair",
+        "rating": 5,
+        "price": 299
+    },
+    {
+        "img": "assets/images/chair-3.png",
+        "imgAlt": "",
+        "type": "Chair",
+        "name": "Anjay Chair",
+        "rating": 5,
+        "price": 519
+    },
+    {
+        "img": "assets/images/chair-4.png",
+        "imgAlt": "",
+        "type": "Chair",
+        "name": "Nyantuy Chair",
+        "rating": 5,
+        "price": 921
+    },
+    {
+        "img": "assets/images/chair-1.png",
+        "imgAlt": "",
+        "type": "Chair",
+        "name": "Sakarias Armchair",
+        "rating": 5,
+        "price": 392
+    },
+    {
+        "img": "assets/images/chair-2.png",
+        "imgAlt": "",
+        "type": "Chair",
+        "name": "Baltsar Chair",
+        "rating": 5,
+        "price": 299
+    },
+    {
+        "img": "assets/images/chair-3.png",
+        "imgAlt": "",
+        "type": "Chair",
+        "name": "Anjay Chair",
+        "rating": 5,
+        "price": 519
+    },
+    {
+        "img": "assets/images/chair-4.png",
+        "imgAlt": "",
+        "type": "Chair",
+        "name": "Nyantuy Chair",
+        "rating": 5,
+        "price": 921
     }
 ]
