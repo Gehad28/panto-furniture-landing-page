@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panto</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/9fdc676c6c.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
 </head>
 <body>
     <header>
@@ -78,38 +80,62 @@
                 <p>
                     The advantage of hiring a workspace with us is that givees you comfortable service and all-around facilities.
                 </p>
-                <p>
+                <button>
                     More Info 
                     <i class="fa-solid fa-arrow-right-long"></i>
-                </p>
+                </button>
             </div>
             <div class="item">
                 <h3>Affordable Price</h3>
                 <p>
                     You can get a workspace of the highst quality at an affordable price and still enjoy the facilities that are oly here.
                 </p>
-                <p>
+                <button>
                     More Info 
                     <i class="fa-solid fa-arrow-right-long"></i>
-                </p>
+                </button>
             </div>
             <div class="item">
                 <h3>Many Choices</h3>
                 <p>
                     We provide many unique work space choices so that you can choose the workspace to your liking.
                 </p>
-                <p>
+                <button>
                     More Info 
                     <i class="fa-solid fa-arrow-right-long"></i>
-                </p>
+                </button>
             </div>
         </div>
 
-        <!-- Put the above data in json file and create the section with js -->
+        <div class="third-section">
+            <h2>Best Selling Product</h2>
+            <div class="navigating-btns">
+                <button class="btn-sm btn-sm-active">Chair</button>
+                <button class="btn-sm">Beds</button>
+                <button class="btn-sm">Sofa</button>
+                <button class="btn-sm">Lamp</button>
+            </div>
+            <div class="slide-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper"></div>
+                </div>
+                <div class="swiper-button-next">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                </div>
+            </div>
+            <button>
+                View All
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+        </div>
     </main>
 
     <footer></footer>
 
-    <script src="script.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
