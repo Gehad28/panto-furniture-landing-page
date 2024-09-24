@@ -187,6 +187,10 @@ input[type="search"]:focus {
     outline: none;
 }
 
+.input-field:focus-within {
+    outline: 1px solid white;
+}
+
 input[type="search"]::placeholder {
     color: rgba(255, 255, 255, 0.6);
     font-size: 1em;
@@ -204,6 +208,11 @@ input[type="search"]::-webkit-search-cancel-button {
     border-radius: 50%;
     padding: 0.8rem;
     font-size: 0.8em;
+    cursor: pointer;
+}
+
+.fa-magnifying-glass:hover {
+    background-color: rgba(229, 132, 17, 0.8);
 }
 
 .second-section {
