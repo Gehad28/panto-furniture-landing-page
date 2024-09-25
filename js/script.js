@@ -143,6 +143,8 @@ function createCard(card) {
     addBtn.classList.add("btn-dark");
     addBtn.classList.add("add-btn");
 
+    addBtn.addEventListener("click", handleAddBtn);
+
     cardPriceDiv.appendChild(priceDiv);
     cardPriceDiv.appendChild(addBtn);
 
@@ -211,4 +213,10 @@ function createReviewCard(card) {
     cardDiv.appendChild(reviewCard);
 
     reviewsContainer.appendChild(cardDiv);
+}
+
+function handleAddBtn() {
+    const cart = document.querySelector(".cart-items-no");
+    let cartNo = Number(cart.textContent);
+    cart.innerHTML = `${cartNo + 1}`;
 }
