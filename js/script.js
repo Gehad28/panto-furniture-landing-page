@@ -196,7 +196,8 @@ function createReviewCard(card) {
     const review = document.createElement("p");
     review.innerHTML = `${card.review}`;
 
-    const ratingDiv = document.createElement("rating");
+    const ratingDiv = document.createElement("div");
+    ratingDiv.classList.add("rating");
     createRatingIcons(card.rating, ratingDiv, false);
 
     if (card.rating < 5) {
