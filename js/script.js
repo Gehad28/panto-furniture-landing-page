@@ -29,8 +29,6 @@ furnitureBtn.addEventListener("click", handleDropDownMenu);
 
 // Cards
 
-const cardsContainer = document.querySelector(".card-wrapper");
-
 fetch("data/chair.json").then((request) => {
     if(!request.ok) {
         console.log("Something went wrong!");
@@ -38,7 +36,6 @@ fetch("data/chair.json").then((request) => {
     }
     return request.json();
 }).then(data => {
-    console.log(data);
     data.forEach(card => {
         createCard(card);
     })
@@ -70,7 +67,38 @@ var swiper = new Swiper(".slide-content", {
 });
 
 
+// Reviews
+
+fetch("data/reviews.json").then((response) => {
+    if (!response.ok) {
+        console.log("Something went wrong!");
+        return null;
+    }
+    return response.json();
+}).then(data => {
+    data.forEach(card => {
+        createReviewCard(card);
+    })
+});
+
+var swiperReviews = new Swiper(".slide-content-reviews", {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    loop: false,
+    centerSlide: 'true',
+    fade: 'true',
+    gragCursor: 'true',
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
+
+
 function createCard(card) {
+    const cardsContainer = document.querySelector(".card-wrapper");
+
     const cardDiv = document.createElement("div");
     cardDiv.classList.add("card");
     cardDiv.classList.add("swiper-slide");
@@ -94,11 +122,10 @@ function createCard(card) {
     const ratingDiv = document.createElement("div");
     ratingDiv.classList.add("rating");
 
-    for (let i = 0; i < Number(card.rating); i++) {
-        const icon = document.createElement("i");
-        icon.classList.add("fa-solid");
-        icon.classList.add("fa-star");
-        ratingDiv.appendChild(icon);
+    createRatingIcons(card.rating, ratingDiv, false);
+
+    if (Number(card.rating) < 5) {
+        createRatingIcons(5 - card.rating, ratingDiv, true);
     }
     cardInfo.appendChild(ratingDiv);
 
@@ -125,4 +152,62 @@ function createCard(card) {
     cardDiv.appendChild(cardBottom);
 
     cardsContainer.appendChild(cardDiv);
+}
+
+function createRatingIcons(rating, ratingDiv, flag) {
+    for (let i = 0; i < Number(rating); i++) {
+        const icon = document.createElement("i");
+        icon.classList.add("fa-solid");
+        icon.classList.add("fa-star");
+        if (flag) {
+            icon.classList.add("bale-star");
+        }
+        ratingDiv.appendChild(icon);
+    }
+}
+
+function createReviewCard(card) {
+    const reviewsContainer = document.querySelector(".reviews-wrapper");
+
+    const cardDiv = document.createElement("div");
+    cardDiv.classList.add("card");
+    cardDiv.classList.add("swiper-slide");
+
+    const image = document.createElement("img");
+    image.src = card.bgImg;
+
+    cardDiv.appendChild(image);
+
+    const reviewCard = document.createElement("div");
+    reviewCard.classList.add("review-card");
+
+    const profileImage = document.createElement("img");
+    profileImage.src = card.profileImg;
+
+    reviewCard.appendChild(profileImage);
+
+    const infoDiv = document.createElement("div");
+    infoDiv.classList.add("info");
+    infoDiv.innerHTML = `
+        <p>${card.name}</p>
+        <p>${card.address}</p>
+    `;
+
+    const review = document.createElement("p");
+    review.innerHTML = `${card.review}`;
+
+    const ratingDiv = document.createElement("rating");
+    createRatingIcons(card.rating, ratingDiv, false);
+
+    if (card.rating < 5) {
+        createRatingIcons(5 - card.rating, ratingDiv, true);
+    }
+
+    reviewCard.appendChild(infoDiv);
+    reviewCard.appendChild(review);
+    reviewCard.appendChild(ratingDiv);
+
+    cardDiv.appendChild(reviewCard);
+
+    reviewsContainer.appendChild(cardDiv);
 }
