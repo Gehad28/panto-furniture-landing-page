@@ -800,7 +800,7 @@ h3 {
 footer {
     padding: 6rem 10rem 4rem 10rem;
     background-color: var(--very-light-grey);
-    font-size: 0.6em;
+    font-size: 0.8em;
     display: flex;
     flex-direction: column;
     gap: 7rem;
