@@ -882,6 +882,13 @@ footer .bottom-section P {
         display: block;
     }
 
+    .second-section,
+    .third-section,
+    .fourth-section,
+    .fifth-section {
+        font-size: 2em;
+    }
+
     .second-section .items {
         display: flex;
         flex-direction: column;
@@ -910,7 +917,7 @@ footer .bottom-section P {
     }
 
     .card-wrapper .card img {
-        top: 0;
+        width: 100%;
     }
 
     .card-wrapper .card {
@@ -930,10 +937,73 @@ footer .bottom-section P {
 
     .fourth-section {
         align-items: center;
+        display: block;
+        padding: 0;
+        position: relative;
+    }
+    
+    .fourth-section .left-side::before,
+    .fourth-section .left-side::after {
+        width: 0;
+        height: 0;
+    }
+
+    .fourth-section .left-side img {
+        height: 1050px;
+    }
+
+    .fourth-section .left-side img,
+    .fifth-section .right-side img {
+        z-index: 0;
+        box-shadow: none;
+    }
+
+    .fourth-section .right-side {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 2rem;
+        right: 2rem;
+        z-index: 1;
+        color: white;
+        background-color: rgba(206, 197, 187, 0.5);
+        padding: 2rem;
+        border-radius: 10px;
+    }
+
+    .fourth-section .right-side p {
+        color: white;
+    }
+
+    .fifth-section {
+        margin-top: 5rem;
+        align-items: center;
+    }
+
+    .fifth-section .right-side {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr 1fr;
+        align-items: start;
+    }
+
+    .fifth-section .right-side img:first-child {
+        grid-row: 1/2;
+    }
+
+    .fifth-section .right-side img:nth-child(2) {
+        grid-row: 2/3;
+    }
+
+    .fifth-section .right-side img:last-child {
+        grid-row: 3/4;
+    }
+
+    .sixth-section {
+        font-size: 1.5em;
     }
 
     .sixth-section .card .review-card {
-        font-size: 1.5em;
+        font-size: 0.8em;
         padding-top: 5rem;
         width: 50%;
     }
@@ -942,7 +1012,18 @@ footer .bottom-section P {
         width: 60%;
     }
 
+    footer {
+        gap: 2rem;
+        padding-left: 4rem;
+    }
+
     footer .top-section {
+        font-size: 2em;
+    }
+
+    footer .top-section,
+    footer .top-section .cols {
         flex-direction: column;
+        gap: 3rem;
     }
 }
