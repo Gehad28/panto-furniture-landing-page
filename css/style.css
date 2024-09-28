@@ -154,7 +154,7 @@ img {
 }
 
 .navbar-mobile {
-    width: 30%;
+    width: 50%;
     height: 100%;
     background-color: white;
     color: var(--very-dark-grey);
@@ -166,7 +166,7 @@ img {
     overflow-y: visible;
     position: fixed;
     z-index: 3;
-    font-size: 0.6em;
+    font-size: 0.8em;
 }
 
 .navbar-mobile.open {
@@ -904,6 +904,14 @@ footer .bottom-section P {
 
     .second-section .item button {
         margin: 1rem auto;
+    }
+
+    .third-section {
+        padding: 8rem 4rem;
+    }
+
+    .slide-container {
+        margin: 5rem 0;
     }
 
     .swiper-button-next,
