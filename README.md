@@ -1,6 +1,7 @@
 # Furniture Website Landing Page
 
 Designed by [Kretya Studio](https://www.figma.com/community/file/1061732519182077733/panto-furniture-landing-page-design)
+
 Implemented by [Gehad Ahmad](https://github.com/Gehad28)
 
 ### Links
