@@ -163,9 +163,10 @@ img {
     padding: 2rem;
     transform: translateX(100%);
     transition: transform 0.5s ease-in-out;
-    overflow: hidden;
+    overflow-y: visible;
     position: fixed;
     z-index: 3;
+    font-size: 0.6em;
 }
 
 .navbar-mobile.open {
@@ -864,7 +865,6 @@ footer .bottom-section P {
 
 
 @media (max-width: 1024px) {
-
     .second-section {
         flex-direction: column;
         gap: 4rem;
@@ -873,6 +873,10 @@ footer .bottom-section P {
 }
 
 @media (max-width: 769px) {
+    nav {
+        font-size: 1.5em;
+    }
+    
     .navbar ul,
     .navbar .shopping-icon {
         display: none;
@@ -908,10 +912,11 @@ footer .bottom-section P {
     }
 
     .slide-content {
-        margin-right: 0;
+        margin: 0;
     }
 
     .card-wrapper .card .image-bg {
+        background-color: transparent;
         align-content: center;
         flex: 1;
     }
@@ -923,7 +928,7 @@ footer .bottom-section P {
     .card-wrapper .card {
         flex-direction: row;
         align-items: center;
-        gap: 2rem;
+        font-size: 0.9em;
     }
 
     .card-wrapper .card .card-bottom {
@@ -977,6 +982,7 @@ footer .bottom-section P {
 
     .fifth-section {
         margin-top: 5rem;
+        padding-right: 4rem;
         align-items: center;
     }
 
