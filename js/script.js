@@ -85,7 +85,7 @@ var swiper = new Swiper(".slide-content", {
         prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-        680: {
+        769: {
             slidesPerView: 2,
             slidesPerGroup: 1,
             spaceBetween: 50,
@@ -161,7 +161,7 @@ var swiperReviews = new Swiper(".slide-content-reviews", {
         prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-        685: {
+        769: {
             slidesPerView: 2,
             spaceBetween: 10,
             loop: false,
@@ -173,7 +173,7 @@ var swiperReviews = new Swiper(".slide-content-reviews", {
                 prevEl: ".swiper-button-prev",
             },
         },
-        850: {
+        950: {
             slidesPerView: 3,
             spaceBetween: 10,
             loop: false,
