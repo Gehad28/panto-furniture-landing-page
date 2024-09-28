@@ -149,7 +149,7 @@ img {
     font-weight: 500;
 }
 
-.show-drop-menu {
+.navbar .show-drop-menu {
     display: block;
 }
 
@@ -227,7 +227,7 @@ header {
 
 h1 {
     font-size: 3em;
-    width: 70%;
+    width: 65%;
 }
 
 .main-section p {
@@ -683,7 +683,7 @@ h3 {
     gap: 1rem;
     text-align: center;
     margin: 4rem 0 10rem 0;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .sixth-section .slide-container {
@@ -715,7 +715,7 @@ h3 {
     background-color: white;
     width: 75%;
     border-radius: 18.12px;
-    padding: 2rem 2rem 2.5rem 2rem;
+    padding: 4rem 2rem 2.5rem 2rem;
     display: grid;
     grid-template-rows: auto 1fr auto;
     height: auto;
@@ -723,12 +723,12 @@ h3 {
 
 .sixth-section .card .review-card::before {
     content: "";
-    width: 3em;
-    height: 3em;
+    width: 3.5em;
+    height: 3.5em;
     border-radius: 50%;
     background-color: white;
     position: absolute;
-    top: -36px;
+    top: -42px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -738,9 +738,9 @@ h3 {
     border-radius: 50%;
     left: 50%;
     transform: translateX(-50%);
-    top: -23px;
+    top: -30px;
     box-shadow: 0 5px 10px rgba(206, 197, 187, 1);
-    width: 16%;
+    width: 14%;
     height: auto;
 }
 
@@ -800,7 +800,7 @@ h3 {
 footer {
     padding: 6rem 10rem 4rem 10rem;
     background-color: var(--very-light-grey);
-    font-size: 0.6em;
+    font-size: 0.8em;
     display: flex;
     flex-direction: column;
     gap: 7rem;
@@ -870,6 +870,18 @@ footer .bottom-section P {
         gap: 4rem;
     }
 
+        .swiper-pagination {
+        display: none;
+    }
+
+    .sixth-section .card .review-card::before {
+        top: -34px;
+    }
+
+    .sixth-section .card .review-card img {
+        width: 16%;
+        top: -26px;
+    }
 }
 
 @media (max-width: 769px) {
@@ -944,10 +956,6 @@ footer .bottom-section P {
         flex: 1;
     }
 
-    .swiper-pagination {
-        display: none;
-    }
-
     .fourth-section {
         align-items: center;
         display: block;
@@ -1018,8 +1026,17 @@ footer .bottom-section P {
 
     .sixth-section .card .review-card {
         font-size: 0.8em;
-        padding-top: 5rem;
+        padding-top: 3rem;
         width: 50%;
+    }
+
+    .sixth-section .card .review-card::before {
+        top: -50px;
+    }
+
+    .sixth-section .card .review-card img {
+        width: 18%;
+        top: -34px;
     }
 
     .sixth-section .card>img {

@@ -111,7 +111,7 @@ var swiper = new Swiper(".slide-content", {
                 prevEl: ".swiper-button-prev",
             },
         },
-        1080: {
+        1024: {
             slidesPerView: 4,
             slidesPerGroup: 4,
             spaceBetween: 50,
@@ -173,7 +173,7 @@ var swiperReviews = new Swiper(".slide-content-reviews", {
                 prevEl: ".swiper-button-prev",
             },
         },
-        950: {
+        1024: {
             slidesPerView: 3,
             spaceBetween: 10,
             loop: false,
