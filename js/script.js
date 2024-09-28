@@ -26,6 +26,33 @@ const handleDropDownMenu = (e) => {
 
 furnitureBtn.addEventListener("click", handleDropDownMenu);
 
+// Navbar for mobile
+
+const navBtn = document.querySelector(".nav-btn");
+const navContainer = document.querySelector(".navbar-mobile");
+const closeBtn = document.querySelector(".close-btn");
+
+navBtn.addEventListener("click", (e) => {
+    navContainer.classList.add("open");
+});
+
+closeBtn.addEventListener("click", (e) => {
+    navContainer.classList.remove("open");
+});
+
+const furnitureBtnMob = document.querySelector(".drop-menu-btn-mob");
+const dropDpwnMenuMob = document.querySelector(".drop-menu-mob");
+
+furnitureBtnMob.addEventListener("click", (e) => {
+    if (dropDpwnMenuMob.style.height === "0px" || !dropDpwnMenuMob.style.height) {
+        const conetentHeight = dropDpwnMenuMob.scrollHeight;
+        dropDpwnMenuMob.style.height = conetentHeight + 'px';
+    }
+    else {
+        dropDpwnMenuMob.style.height = "0";
+    }
+});
+
 
 // Cards
 
@@ -46,24 +73,65 @@ fetch("data/chair.json").then((request) => {
 const customBullets = ["Chair", "Beds", "Sofa", "Lamp"];
 
 var swiper = new Swiper(".slide-content", {
-    slidesPerView: 4,
-    slidesPerGroup: 4,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
     spaceBetween: 50,
     loop: false,
     centerSlide: 'true',
     fade: 'true',
     gragCursor: 'true',
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        renderBullet: function (index, className) {
-            return `<button class="${className}">${customBullets[index]}</button>`; // Numbered bullets
-        },
-    },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+        680: {
+            slidesPerView: 2,
+            slidesPerGroup: 1,
+            spaceBetween: 50,
+            loop: false,
+            centerSlide: 'true',
+            fade: 'true',
+            gragCursor: 'true',
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        },
+        953: {
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+            spaceBetween: 50,
+            loop: false,
+            centerSlide: 'true',
+            fade: 'true',
+            gragCursor: 'true',
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        },
+        1080: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+            spaceBetween: 50,
+            loop: false,
+            centerSlide: 'true',
+            fade: 'true',
+            gragCursor: 'true',
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return `<button class="${className}">${customBullets[index]}</button>`; // Numbered bullets
+                },
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        }
+    }
 });
 
 
@@ -82,7 +150,7 @@ fetch("data/reviews.json").then((response) => {
 });
 
 var swiperReviews = new Swiper(".slide-content-reviews", {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 10,
     loop: false,
     centerSlide: 'true',
@@ -92,6 +160,32 @@ var swiperReviews = new Swiper(".slide-content-reviews", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+        685: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+            loop: false,
+            centerSlide: 'true',
+            fade: 'true',
+            gragCursor: 'true',
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        },
+        850: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            loop: false,
+            centerSlide: 'true',
+            fade: 'true',
+            gragCursor: 'true',
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        }
+    }
 });
 
 

@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
+    <nav>
+        <div class="navbar">
             <div class="logo">
                 <span>
                     <a href="/">Panto</a>
@@ -53,10 +53,55 @@
                     </li>
                 </ul>
             </div>
-        </nav>
-    </header>
-
-    <main>
+            <div class="nav-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="navbar-mobile">
+            <div class="nav-container">
+                <div class="close-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="shopping-icon">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <div class="cart-items-no">0</div>
+                </div>
+                <ul>
+                    <li>
+                        <span class="drop-menu-btn-mob list-item">Furniture
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </span>
+                        <div class="drop-menu-mob">
+                            <ul>
+                                <li>
+                                    <a href="#">Chair</a>
+                                </li>
+                                <li>
+                                    <a href="#">Bed</a>
+                                </li>
+                                <li>
+                                    <a href="#">Sofa</a>
+                                </li>
+                                <li>
+                                    <a href="#">Lamp</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="list-item">Shop</a>
+                    </li>
+                    <li>
+                        <a href="#" class="list-item">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="list-item">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
         <div class="main-section">
             <h1>
                 Make your Interior More
@@ -72,38 +117,58 @@
                 </div>
             </form>
         </div>
+    </header>
+
+    <main>
+        <!-- <div class="main-section">
+            <h1>
+                Make your Interior More
+                Minimalistic & Modern
+            </h1>
+            <p>
+                Turn your room with panto into a lot more minimalist and modern with ease and speed
+            </p>
+            <form action="#">
+                <div class="input-field">
+                    <input type="search" placeholder="Search furniture">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </form>
+        </div> -->
 
         <div class="second-section">
             <h2>Why Choosing Us</h2>
-            <div class="item">
-                <h3>Luxury facilities</h3>
-                <p>
-                    The advantage of hiring a workspace with us is that givees you comfortable service and all-around facilities.
-                </p>
-                <button>
-                    More Info 
-                    <i class="fa-solid fa-arrow-right-long"></i>
-                </button>
-            </div>
-            <div class="item">
-                <h3>Affordable Price</h3>
-                <p>
-                    You can get a workspace of the highst quality at an affordable price and still enjoy the facilities that are oly here.
-                </p>
-                <button>
-                    More Info 
-                    <i class="fa-solid fa-arrow-right-long"></i>
-                </button>
-            </div>
-            <div class="item">
-                <h3>Many Choices</h3>
-                <p>
-                    We provide many unique work space choices so that you can choose the workspace to your liking.
-                </p>
-                <button>
-                    More Info 
-                    <i class="fa-solid fa-arrow-right-long"></i>
-                </button>
+            <div class="items">
+                <div class="item">
+                    <h3>Luxury facilities</h3>
+                    <p>
+                        The advantage of hiring a workspace with us is that givees you comfortable service and all-around facilities.
+                    </p>
+                    <button>
+                        More Info
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </button>
+                </div>
+                <div class="item">
+                    <h3>Affordable Price</h3>
+                    <p>
+                        You can get a workspace of the highst quality at an affordable price and still enjoy the facilities that are oly here.
+                    </p>
+                    <button>
+                        More Info
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </button>
+                </div>
+                <div class="item">
+                    <h3>Many Choices</h3>
+                    <p>
+                        We provide many unique work space choices so that you can choose the workspace to your liking.
+                    </p>
+                    <button>
+                        More Info
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </button>
+                </div>
             </div>
         </div>
 
